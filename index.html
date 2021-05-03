@@ -1,0 +1,420 @@
+<!--Tis is a tech document about python-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>PYTHON (PY)</title>
+<meta charset="UTF-8"  />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="techdoc.css" />
+
+</head>
+
+<body>
+<nav id="navbar">
+<header><h1>PY DOCUMENTATION</h1></header>
+<ul>
+<li> <a class="nav-link" href="#Introduction" >Introduction</a> </li>
+<li> <a class="nav-link" href="#Installation" >Installation</a> </li>
+<li> <a class="nav-link" href="#Python_IDLE" >Python IDLE</a> </li>
+<li> <a class="nav-link" href="#Data_Types" >Data Types</a> </li>
+<li> <a class="nav-link" href="#Control_Flow" >Control Flow</a> </li>
+<li> <a class="nav-link" href="#Functions" >Functions</a> </li>
+<li> <a class="nav-link" href="#Objects" >Objects</a> </li>
+<li> <a class="nav-link" href="#Conclusion" >Conclusion</a> </li>
+
+</ul>
+</nav>
+<main id="main-doc" >
+
+
+<section class="main-section" id="Introduction" >
+<header><h3>Introduction</h3></header>
+<p>
+Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+</p>
+ <p>
+Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library. 
+ </p>
+ 
+ <p>Python was designed and released by Guido van Rossum in 1991. Currently, Python is of two versions which are Python2 and Python3. Python3 is the latest and its considered the way forward because it has a lot of improvement when compared to Python2.</p>
+ 
+ <p>Python consistently ranks as one of the most popular programming languages.</p>
+</section>
+
+<section class="main-section" id="Installation">
+<header><h3>Installation</h3></header>
+<p>Installing or updating Python on your computer is the first step to becoming a Python programmer. There are a multitude of installation methods: you can download official Python distributions from <a href="https://python.org">Python.org</a>, install from a package manager, and even install specialized distributions for scientific computing, Internet of Things, and embedded systems.
+</p>
+
+<p>Python can be installed on any platform but this tutorial will only focus on installation on Windows.</p>
+<p>There are three installation methods on Windows:</p>
+<ol>
+<li><strong>Microsoft Store package:</strong> The most straightforward installation method on Windows involves installing from the Microsoft Store app. This is recommended for beginner Python users looking for an easy-to-set-up interactive experience.</li>
+<li><strong>Full Installer:</strong> This approach involves downloading Python directly from the Python.org website. This is recommended for intermediate and advanced developers who need more control during the setup process.</li>
+<li><strong>Windows Subsystem for Linux (WSL):</strong> The WSL allows you to run a Linux environment directly in Windows.</li>
+</ol>
+
+<p>My explanation will focus on only the first two options because they are the most popular methods. Lets dive in.</p>
+<h3>How to Install From the Microsoft Store</h3>
+<p>If you’re new to Python and looking to get started quickly, then the Microsoft Store package is the best way to get up and running without any fuss. You can install from the Microsoft Store in two steps.</p>
+<h3>Step 1: Open the Python App Page in the Microsoft Store
+</h3>
+<p>Open the Microsoft Store app and search for Python.</p>
+
+<p>You’ll likely see multiple versions that you can choose to install:</p>
+<figure>
+<img src="microsoft_store.png" alt="Microsoft Store">
+<!--<figcaption>Credit:Image from realpython.com</figcaption>-->
+</figure>
+
+<p>Select Python 3.8, or the highest version number you see available in the app, to open the installation page.</p>
+<p>Alternatively, you can open PowerShell and type the following command:</p>
+<div class="windows_console">
+<pre><code>C:\> python</code></pre>
+</div>
+
+<p>If you don’t already have a version of Python on your system, then when you press Enter, the Microsoft Store will automatically launch and take you to the latest version of Python in the store.</p>
+<h3>Step 2: Install the Python App</h3>
+<p>After you’ve selected the version to be installed, follow these steps to complete the installation:</p>
+
+<ol>
+<li>Click Get.</li>
+<li>Wait for the application to download. When it’s finished downloading, the Get button will be replaced with a button that says Install on my devices.</li>
+<li>Click Install on my devices and select the devices on which you’d like to complete the installation.</li>
+<li>Click Install Now and then OK to start the installation.</li>
+<li>If the installation was successful, then you’ll see the message “This product is installed” at the top of the Microsoft Store page.</li>
+</ol>
+<p>Congratulation! Your journey to the wilderness has just begun.</p>
+
+<h3>How to Install From the Full Installer</h3>
+<p>For professional developers who need a full-featured Python development environment, installing from the full installer is the right choice. It offers more customization and control over the installation than installing from the Microsoft Store.</p>
+<p>You can install from the full installer in two steps.</p>
+
+<h4>Step 1: Download the Full Installer </h4>
+<p>Follow these steps to download the full installer:</p>
+
+<ol>
+<li>Open a browser window and navigate to the Python.org Downloads page for Windows.</li>
+<li>Under the “Python Releases for Windows” heading, click the link for the Latest Python 3 Release - Python 3.x.x. As of this writing, the latest version was Python 3.8.4.</li>
+<li>Scroll to the bottom and select either Windows x86-64 executable installer for 64-bit or Windows x86 executable installer for 32-bit.</li>
+</ol>
+
+<p>When the installer is finished downloading, move on to the next step.</p>
+<h4>Step 2: Run the Installer</h4>
+<p>Once you’ve chosen and downloaded an installer, run it by double-clicking on the downloaded file. A dialog box like the one below will appear:</p>
+
+<figure>
+<img src="setup.png" alt="Python windows steup">
+<!--<figcaption>Credit:Image from realpython.com</figcaption>-->
+</figure>
+<p>There are four things to notice about this dialog box:</p>
+
+<ol>
+<li>The default install path is in the AppData/ directory of the current Windows user.</li>
+<li>The Customize installation button can be used to customize the installation location and which additional features get installed, including pip and IDLE.</li>
+<li>The Install launcher for all users (recommended) checkbox is checked default. This means every user on the machine will have access to the py.exe launcher. You can uncheck this box to restrict Python to the current Windows user.</li>
+<li>The Add Python 3.8 to PATH checkbox is unchecked by default. There are several reasons that you might not want Python on PATH, so make sure you understand the implications before you check this box.</li>
+</ol>
+<p>Customize the installation to meet your needs using the options available on the dialog box. Then click Install Now.</p>
+<p>Congratulations—you now have the latest breed of python in your game reserve.</p>
+</section>
+
+
+
+<section class="main-section" id="Python_IDLE">
+<header><h3>Python IDLE</h3></header>
+<p>Every Python installation comes with an Integrated Development and Learning Environment, which you’ll see shortened to IDLE or even IDE. These are a class of applications that help you write code more efficiently. While there are many IDEs for you to choose from, Python IDLE is very bare-bones, which makes it the perfect tool for a beginning programmer.</p>
+
+<p>Python IDLE comes included in Python installations on Windows and Mac. If you’re a Linux user, then you should be able to find and download Python IDLE using your package manager. Once you’ve installed it, you can then use Python IDLE as an interactive interpreter or as a file editor.</p>
+<p>If you are running Windows, you will be starting IDLE from the Python XY package. From Start Menu, open IDLE as follows:
+<strong>Start → All Programs → Python3 → IDLE (Python GUI)</strong></p>
+<h4>An Interactive Interpreter</h4>
+<p>The best place to experiment with Python code is in the interactive interpreter, otherwise known as a shell. The shell is a basic Read-Eval-Print Loop (REPL). It reads a Python statement, evaluates the result of that statement, and then prints the result on the screen. Then, it loops back to read the next statement.</p>
+
+<p>The Python shell is an excellent place to experiment with small code snippets. You can access it through the terminal or command line app on your machine. You can simplify your workflow with Python IDLE, which will immediately start a Python shell when you open it.</p>
+
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+</code>
+</pre>
+</div>
+
+<p> This is a blank Python interpreter window. You can use it to start interacting with Python immediately. You can test it out with a short line of code:</p>
+
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>print('Hello! ladies and gentlemen')
+Hello! ladies and gentlemen
+>>>
+</code>
+</pre>
+</div>
+<p>Here, you used print() to output the string "Hello, from IDLE!" to your screen. This is the most basic way to interact with Python IDLE. You type in commands one at a time and Python responds with the result of each command.</p>
+<h4>A File Editor</h4>
+
+<p>Every programmer needs to be able to edit and save text files. Python programs are files with the .py extension that contain lines of Python code. Python IDLE gives you the ability to create and edit these files with ease.
+
+</p>
+
+<p>Python IDLE also provides several useful features that you’ll see in professional IDEs, like basic syntax highlighting, code completion, and auto-indentation. Professional IDEs are more robust pieces of software and they have a steep learning curve. If you’re just beginning your Python programming journey, then Python IDLE is a great alternative!
+
+</p>
+</section>
+
+
+
+
+<section class="main-section" id="Data_Types">
+<header><h3>Data Types</h3></header>
+<p></p>
+</section>
+
+
+
+
+<section class="main-section" id="Control_Flow">
+<header><h3>Control Flow</h3></header>
+<p>A program’s control flow is the order in which the program’s code executes.
+
+The control flow of a Python program is regulated by conditional statements, loops, and function calls.</p>
+<p>Python has three types of control structures:</p>
+<ul>
+<li><strong> Sequential</strong> - default mode
+</li>
+<li><strong>Selection</strong> - used for decisions and branching</li>
+<li><strong> Repetition</strong> - used for looping, i.e., repeating a piece of code multiple times.</li>
+</ul>
+
+<h4>1. Sequential</h4>
+<p><strong> Sequential statements</strong> are a set of statements whose execution process happens in a sequence. The problem with sequential statements is that if the logic has broken in any one of the lines, then the complete source code execution will break.</p>
+<p></p>
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> ## This is a sequential statement
+>>> a= 20
+>>> b=10
+>>> c =a-b
+>>> print('subtraction is:', c)
+subtraction is: 10
+</code>
+</pre>
+</div>
+<h4>2. Selection/Decision control statements</h4>
+<p>In Python, the selection statements are also known as Decision control statements or branching statements.
+
+The selection statement allows a program to test several conditions and execute instructions based on which condition is true.</p>
+
+<p>Some Decision Control Statements are:</p>
+<ul>
+
+<li>Simple if</li>
+<li>if-else</li>
+<li>nested if</li>
+<li>if-elif-else</li>
+</ul>
+<p><strong> Simple if:</strong> If statements are control flow statements that help us to run a particular code, but only when a certain condition is met or satisfied. A simple if only has one condition to check.
+
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> n = 10
+>>> if n % 2 == 0:
+	print("n is an even number")
+	
+n is an even number
+>>> 
+</code>
+</pre>
+</div>
+
+<p><strong> if-else:</strong> The if-else statement evaluates the condition and will execute the body of if if the test condition is True, but if the condition is False, then the body of else is executed.</p>
+</p>
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> if n % 2 == 0:
+	print("n is even")
+else:
+	print("n is odd")
+
+
+n is odd
+>>> 
+</code>
+</pre>
+</div>
+
+<p><strong>nested if:</strong> Nested if statements are an if statement inside another if statement.</p>
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = 5
+>>> b = 10
+>>> c =15
+>>> if a > b:
+	if a > c:
+		print("a value is big")
+	else:
+		print("c value is big")
+elif b > c:
+	print("b value is big")
+else:
+	print("c is big")
+
+	
+c is big
+>>> 
+</code>
+</pre>
+</div>
+
+<p><strong> if-elif-else:</strong> The if-elif-else statement is used to conditionally execute a statement or a block of statements.</p>
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x = 15
+>>> y = 12
+>>> if x == y:
+	print("Both are Equal")
+elif x > y:
+	print("x is greater than y")
+else:
+	print("x is smaller than y")
+
+	
+x is greater than y
+>>> 
+</code>
+</pre>
+</div>
+
+<h4>3. Repetition</h4>
+<p>A <strong>repetition statement</strong> is used to repeat a group(block) of programming instructions.</p>
+<p>In Python, we generally have two loops/repetitive statements:</p>
+<ul>
+<li>for loop</li>
+<li>while loop</li>
+</ul>
+
+<p><strong>for loop:</strong> A for loop is used to iterate over a sequence that is either a list, tuple, dictionary, or a set. We can execute a set of statements once for each item in a list, tuple, or dictionary.</p>
+
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> for i in range(len(lst)):
+	print(lst[i], end = " ")
+
+	
+1 2 3 4 5 
+>>> for j in range(0,10):
+	print(j, end =' ')
+
+	
+0 1 2 3 4 5 6 7 8 9 
+>>>
+</code>
+</pre>
+</div>
+
+<p><strong>while loop:</strong> In Python, while loops are used to execute a block of statements repeatedly until a given condition is satisfied. Then, the expression is checked again and, if it is still true, the body is executed again. This continues until the expression becomes false.</p>
+
+
+<div>
+<pre>
+<code>
+$ python3.9
+Python 3.9 (default, June 4 2019, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> m = 5
+>>> i = 0
+>>> while i < m:
+	print(i, end =" ")
+	i = i + 1
+
+	
+0 1 2 3 4 
+>>> 
+</code>
+</pre>
+</div>
+
+</section>
+
+
+
+
+<section class="main-section" id="Functions">
+<header><h3>Functions</h3></header>
+<p></p>
+</section>
+
+
+
+
+<section class="main-section" id="Objects">
+<header><h3>Objects</h3></header>
+<p></p>
+</section>
+
+
+
+
+<section class="main-section" id="Conclusion">
+<header><h3>Conclusion</h3></header>
+<h4>References</h4>
+<ul>
+<li>https://realpython.com/installing-python</li>
+<li>https://realpython.com/python-idle/</li>
+<li>https://docs.python.org/3/tutorial/interpreter.html</li>
+<li>https://www.educative.io/edpresso/what-are-control-flow-statements-in-python</li>
+<li>https://docs.python.org/3/tutorial/</li>
+</ul>
+<p></p>
+<p></p>
+</section>
+
+
+</main>
+</body>
+
+
+</html>
