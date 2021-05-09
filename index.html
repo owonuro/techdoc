@@ -13,15 +13,15 @@
 
 <body>
 <nav id="navbar">
-<header><h1>PY DOCUMENTATION</h1></header>
+<header><h1>PYTHON!</h1></header>
 <ul>
-<li> <a class="nav-link" href="#Introduction" >Introduction</a> </li>
+<li> <a class="nav-link" href="#Introduction" id="stl">Introduction</a> </li>
 <li> <a class="nav-link" href="#Installation" >Installation</a> </li>
 <li> <a class="nav-link" href="#Python_IDLE" >Python IDLE</a> </li>
 <li> <a class="nav-link" href="#Data_Types" >Data Types</a> </li>
 <li> <a class="nav-link" href="#Control_Flow" >Control Flow</a> </li>
-<li> <a class="nav-link" href="#Functions" >Functions</a> </li>
-<li> <a class="nav-link" href="#Objects" >Objects</a> </li>
+<!--<li> <a class="nav-link" href="#Functions" >Functions</a> </li>-->
+<!--<li> <a class="nav-link" href="#Objects" >Objects</a> </li>-->
 <li> <a class="nav-link" href="#Conclusion" >Conclusion</a> </li>
 
 </ul>
@@ -30,7 +30,7 @@
 
 
 <section class="main-section" id="Introduction" >
-<header><h3>Introduction</h3></header>
+<header><h2>Introduction</h2></header>
 <p>
 Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
 </p>
@@ -38,13 +38,13 @@ Python is an interpreted high-level general-purpose programming language. Python
 Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library. 
  </p>
  
- <p>Python was designed and released by Guido van Rossum in 1991. Currently, Python is of two versions which are Python2 and Python3. Python3 is the latest and its considered the way forward because it has a lot of improvement when compared to Python2.</p>
+ <p>Python was designed and released by <em>Guido van Rossum</em> in 1991. Currently, Python is of two versions which are <em>Python2</em> and <em>Python3.</em> Python3 is the latest and its considered the way forward because it has a lot of improvement when compared to Python2.</p>
  
  <p>Python consistently ranks as one of the most popular programming languages.</p>
 </section>
 
 <section class="main-section" id="Installation">
-<header><h3>Installation</h3></header>
+<header><h2>Installation</h2></header>
 <p>Installing or updating Python on your computer is the first step to becoming a Python programmer. There are a multitude of installation methods: you can download official Python distributions from <a href="https://python.org">Python.org</a>, install from a package manager, and even install specialized distributions for scientific computing, Internet of Things, and embedded systems.
 </p>
 
@@ -92,7 +92,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 <p>For professional developers who need a full-featured Python development environment, installing from the full installer is the right choice. It offers more customization and control over the installation than installing from the Microsoft Store.</p>
 <p>You can install from the full installer in two steps.</p>
 
-<h4>Step 1: Download the Full Installer </h4>
+<h3>Step 1: Download the Full Installer </h3>
 <p>Follow these steps to download the full installer:</p>
 
 <ol>
@@ -102,7 +102,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 </ol>
 
 <p>When the installer is finished downloading, move on to the next step.</p>
-<h4>Step 2: Run the Installer</h4>
+<h3>Step 2: Run the Installer</h3>
 <p>Once you’ve chosen and downloaded an installer, run it by double-clicking on the downloaded file. A dialog box like the one below will appear:</p>
 
 <figure>
@@ -124,13 +124,13 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 
 
 <section class="main-section" id="Python_IDLE">
-<header><h3>Python IDLE</h3></header>
+<header><h2>Python IDLE</h2></header>
 <p>Every Python installation comes with an Integrated Development and Learning Environment, which you’ll see shortened to IDLE or even IDE. These are a class of applications that help you write code more efficiently. While there are many IDEs for you to choose from, Python IDLE is very bare-bones, which makes it the perfect tool for a beginning programmer.</p>
 
 <p>Python IDLE comes included in Python installations on Windows and Mac. If you’re a Linux user, then you should be able to find and download Python IDLE using your package manager. Once you’ve installed it, you can then use Python IDLE as an interactive interpreter or as a file editor.</p>
 <p>If you are running Windows, you will be starting IDLE from the Python XY package. From Start Menu, open IDLE as follows:
 <strong>Start → All Programs → Python3 → IDLE (Python GUI)</strong></p>
-<h4>An Interactive Interpreter</h4>
+<h3>An Interactive Interpreter</h3>
 <p>The best place to experiment with Python code is in the interactive interpreter, otherwise known as a shell. The shell is a basic Read-Eval-Print Loop (REPL). It reads a Python statement, evaluates the result of that statement, and then prints the result on the screen. Then, it loops back to read the next statement.</p>
 
 <p>The Python shell is an excellent place to experiment with small code snippets. You can access it through the terminal or command line app on your machine. You can simplify your workflow with Python IDLE, which will immediately start a Python shell when you open it.</p>
@@ -163,7 +163,7 @@ Hello! ladies and gentlemen
 </pre>
 </div>
 <p>Here, you used print() to output the string "Hello, from IDLE!" to your screen. This is the most basic way to interact with Python IDLE. You type in commands one at a time and Python responds with the result of each command.</p>
-<h4>A File Editor</h4>
+<h3>A File Editor</h3>
 
 <p>Every programmer needs to be able to edit and save text files. Python programs are files with the .py extension that contain lines of Python code. Python IDLE gives you the ability to create and edit these files with ease.
 
@@ -178,15 +178,33 @@ Hello! ladies and gentlemen
 
 
 <section class="main-section" id="Data_Types">
-<header><h3>Data Types</h3></header>
-<p></p>
+<header><h2>Data Types</h2></header>
+<p>All data in python are object because Python is an <em>Object Oriented Program(OOP)</em>. As an object, each data type has its own unique methods that are used to manipulate.E.g List can be indexed and its mutable while tuple can also be indexed but immutable. </p>
+<p>Basic Python Built-In data types are listed below according to <a href="https://www.w3schools.com/python/python_datatypes.asp">www.w3schools.com</a>.</p>
+<ul>
+<li>Text Type:	<code>str</code></li>
+<li>Numeric Types:	<code> int, float, complex</code></li>
+<li>Sequence Types:	<code>list, tuple, range</code></li>
+<li>Mapping Type:	<code> dict</code></li>
+<li>Set Types:	<code> set, frozenset</code></li>
+<li>Boolean Type:	<code>bool</code></li>
+<li>Binary Types: <code>	bytes, bytearray, memoryview</code>
+</li>
+</ul>
+
+<p>Data type are set when you assign value to a variable.<br/> E.g <code>my_name = 'Balogun Quadri'</code> Which is a string  </p>
+<p><code>my_age = 45</code> which is an integer</p>
+<p><code>fruits= ['apple', 'mango', 'dates', 'carrot']</code> which is a list</p>
+<p><code>Maths_score= {'Balogun Quadri':45, 'Ishola Tobi':32, 'Balogun Maryam':56}</code> which is a dictionary</p>
+<p>Click on the link provided to get detailed information about this topic.</p>
+
 </section>
 
 
 
 
 <section class="main-section" id="Control_Flow">
-<header><h3>Control Flow</h3></header>
+<header><h2>Control Flow</h2></header>
 <p>A program’s control flow is the order in which the program’s code executes.
 
 The control flow of a Python program is regulated by conditional statements, loops, and function calls.</p>
@@ -198,7 +216,7 @@ The control flow of a Python program is regulated by conditional statements, loo
 <li><strong> Repetition</strong> - used for looping, i.e., repeating a piece of code multiple times.</li>
 </ul>
 
-<h4>1. Sequential</h4>
+<h3>1. Sequential</h3>
 <p><strong> Sequential statements</strong> are a set of statements whose execution process happens in a sequence. The problem with sequential statements is that if the logic has broken in any one of the lines, then the complete source code execution will break.</p>
 <p></p>
 <div>
@@ -217,7 +235,7 @@ subtraction is: 10
 </code>
 </pre>
 </div>
-<h4>2. Selection/Decision control statements</h4>
+<h3>2. Selection/Decision control statements</h3>
 <p>In Python, the selection statements are also known as Decision control statements or branching statements.
 
 The selection statement allows a program to test several conditions and execute instructions based on which condition is true.</p>
@@ -382,34 +400,35 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
-<section class="main-section" id="Functions">
-<header><h3>Functions</h3></header>
+<!--<section class="main-section" id="Functions">
+<header><h2>Functions</h2></header>
 <p></p>
-</section>
+</section>-->
 
 
 
 
-<section class="main-section" id="Objects">
-<header><h3>Objects</h3></header>
+<!--<section class="main-section" id="Objects">
+<header><h2>Objects</h2></header>
 <p></p>
-</section>
+</section>-->
 
 
 
 
 <section class="main-section" id="Conclusion">
-<header><h3>Conclusion</h3></header>
-<h4>References</h4>
+<header><h2>Conclusion</h2></header>
+<p>Python is a simple and straightforward programming language when compared to other popular ones like Java. Its written in plain English and that makes remembering its syntax easy. 
+</p>
+<p>This just the beginning of your journey to become a pythonista. Welcome to the wilderness.</p>
+<h3>References</h3>
 <ul>
-<li>https://realpython.com/installing-python</li>
-<li>https://realpython.com/python-idle/</li>
-<li>https://docs.python.org/3/tutorial/interpreter.html</li>
-<li>https://www.educative.io/edpresso/what-are-control-flow-statements-in-python</li>
-<li>https://docs.python.org/3/tutorial/</li>
+<li>To learn more about how to install python on any platform click <a href='https://realpython.com/installing-python'>Installing python</a></li>
+<li>More details about <em>Python IDLE</em> can be found <a href='https://realpython.com/python-idle/'>here.</a></li>
+<li>Visit <a href="https://docs.python.org/3/tutorial/interpreter.html">python.org</a> for detailed info on Python interpreter.</li>
+<li>Simple illustration about control flow can found at <a href="https://www.educative.io/edpresso/what-are-control-flow-statements-in-python">educative.io.</a></li>
+<li>To further your Python journey, visit <a href="https://docs.python.org/3/tutorial/">this</a> python tutorial at pythons official website.</li>
 </ul>
-<p></p>
-<p></p>
 </section>
 
 

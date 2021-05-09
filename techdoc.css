@@ -1,6 +1,53 @@
-*{
+/**{
 padding:0;
 margin: 0;
+}*/
+
+html{
+	font-family: Helvetica}
+
+nav ul{
+	list-style-type: none;
+	margin :0;
+	padding: 0;
+	
+	}
+
+nav ul li{
+
+	border-bottom:3px solid rgb(4, 0, 133);
+}
+
+
+
+#stl{border-top:3px solid rgb(4, 0, 133); }
+
+
+nav ul li a{
+display: block;
+padding-bottom: 10px;
+padding-top: 10px;
+
+}
+
+nav ul li a:hover{
+background-color: rgb(255, 254, 31);
+}
+
+a{
+text-decoration: none;
+}
+
+header{
+color: rgb(4, 0, 133);
+}
+
+code{
+color: rgb(0, 143, 38);
+}
+
+nav header, a{
+padding-left: 20px;
 }
 
 body{
@@ -11,14 +58,16 @@ display: flex;
 nav{
 position: fixed;
 top: 0px;
-left: 4px;
+left: 0px;
 z-index: 10;
 width: 250px;
-padding: 20px;
-margin: 20px;
-border: 3px solid grey;
-height: 85vh;
+padding:0px;
+margin-right: 20px;
+border-right: 4px solid rgb(4, 0, 133);
+height: 100%;
 overflow: scroll;
+background-color: rgba(255, 254, 31, 0.3);
+color: rgb(4, 0, 133);
 }
 
 main{
@@ -44,19 +93,31 @@ margin-left: auto;
 
 body{
 flex-direction: column;
+margin: 0;
 
 }
 
 nav{
+/*
+top: 0px;
+left: 0px;
+z-index: 10;
+width: 250px;
+padding: 20px;
+margin-right: 20px;
+border-right: 4px solid grey;
+height: 100%;
+*/	
+	
+text-align: center;
 position:relative;
-
-
-width: 80%;
-padding: 10px;
-padding-left:20px; 
-margin: 10px;
-margin-right: 5px
-border: 3px solid grey;
+right:;
+border:0;
+width: 100%;
+padding: 0px;
+margin-bottom: 10px;
+margin-right: 0px;
+border-bottom: 3px solid rgb(4, 0, 133);
 height: 40vh;
 overflow: scroll;
 }
